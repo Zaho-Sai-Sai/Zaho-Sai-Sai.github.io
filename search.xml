@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>linux版qv2ray安装</title>
+    <url>/2020/08/27/linux%E7%89%88qv2ray%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>在国内有的网络技术文档都已经很老了，在外国能查看到新的互联网技术进行学习<br>废话不多说</p>
+<ol>
+<li>下载V2ray客户端<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/iIatmf0cmqf">https://wwa.lanzous.com/iIatmf0cmqf</a><br> 更多其他系统版本<br> <a href="https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6">https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6</a></li>
+<li>下载核心<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/ixPOUf0cpyb">https://wwa.lanzous.com/ixPOUf0cpyb</a><br> 更多其他系统版本<br> <a href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases/</a></li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>我创建了一个v2ray文件夹里面是解压好的下载的核心和V2ray客户端<br><img src="https://img-blog.csdnimg.cn/20200726184523611.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li><p>然后在终端输入运行<br> 给他执行权限</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x .&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage	 </span><br></pre></td></tr></table></figure>
+<p> 运行</p>
+</li>
+</ol>
+<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage	 </span><br></pre></td></tr></table></figure></code></pre>
+<ol start="2">
+<li>设置<br> 设置中文<br> 他默认是英文的<img src="https://img-blog.csdnimg.cn/20200726192820628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+<p><strong>添加核心</strong><br>上面下载的核心文件里面的执行文件<br><img src="https://img-blog.csdnimg.cn/20200726194038573.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>添加上面解压出来了的核心文件的根目录<br><img src="https://img-blog.csdnimg.cn/2020072619422713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>客户端代理</category>
+      </categories>
+      <tags>
+        <tag>代理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派，反向ssh，内网通过公网访问到其他内网</title>
+    <url>/2020/08/27/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8C%E5%8F%8D%E5%90%91ssh%EF%BC%8C%E5%86%85%E7%BD%91%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE%E5%88%B0%E5%85%B6%E4%BB%96%E5%86%85%E7%BD%91/</url>
+    <content><![CDATA[<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h2 id="简单说"><a href="#简单说" class="headerlink" title="简单说"></a>简单说</h2><p>a内网，b公网，c内网<br>在c内网怎么访问到a的内网里面，就和访问c内网其他主机一样？<br> 我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，<br> 应为我的笔记本内网穿透没有什么太大的用处 ，可以用花生壳内网穿透很简单。就不多说了<br> 都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，<br> 开始操作<br>在《树莓派渗透实战》书说的如果从外网访问内网，是访问不了的，反向ssh隧道从内网就可以做到<br>内网执行的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -fN -R 5555:localhost:22  root@公网ip</span><br></pre></td></tr></table></figure>
+
+<p>服务器执行的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@localhost -p5555</span><br></pre></td></tr></table></figure>
+
+<h2 id="树莓派安装的是kali-linux系统-安装花生壳树莓派，"><a href="#树莓派安装的是kali-linux系统-安装花生壳树莓派，" class="headerlink" title="树莓派安装的是kali linux系统 安装花生壳树莓派，"></a>树莓派安装的是kali linux系统 安装花生壳树莓派，</h2><p>花生壳地址<a href="https://hsk.oray.com/download/">https://hsk.oray.com/download/</a><br>应为树莓派我安装的arm64位的，他只有32位的，安装不上<br>下面命令对32位的支持</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg --add-architecture armhf</span><br></pre></td></tr></table></figure>
+<p>反正还是安装不是，不知道怎么回事<br><img src="https://img-blog.csdnimg.cn/20200604210928493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="树莓派用Sunny-Ngrok内网穿透"><a href="#树莓派用Sunny-Ngrok内网穿透" class="headerlink" title="树莓派用Sunny-Ngrok内网穿透"></a>树莓派用Sunny-Ngrok内网穿透</h2><p>官方<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a><br><img src="https://img-blog.csdnimg.cn/2020060421113237.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;sunny clientid  隧道id</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200604211248679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自启动<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a>官方说明</p>
+<h2 id="1、下载客户端"><a href="#1、下载客户端" class="headerlink" title="1、下载客户端"></a>1、下载客户端</h2><p>这一步就都不用说了大家都知道怎么操作。下载完成之后将客户端执行文件移动到 /use/local/bin 目录下并给予可执行权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mv sunny &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br><span class="line">sudo chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br></pre></td></tr></table></figure>
+<h2 id="2、编写启动脚本"><a href="#2、编写启动脚本" class="headerlink" title="2、编写启动脚本"></a>2、编写启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;init.d&#x2F;sunny 启动脚本代码</span><br></pre></td></tr></table></figure>
+<p>把代码里面的【隧道id】替换成自己的隧道id</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh -e</span><br><span class="line">### BEGIN INIT INFO</span><br><span class="line"># Provides:          ngrok.cc</span><br><span class="line"># Required-Start:    $network $remote_fs $local_fs</span><br><span class="line"># Required-Stop:     $network $remote_fs $local_fs</span><br><span class="line"># Default-Start:     2 3 4 5</span><br><span class="line"># Default-Stop:      0 1 6</span><br><span class="line"># Short-Description: autostartup of frp for Linux</span><br><span class="line">### END INIT INFO</span><br><span class="line"></span><br><span class="line">NAME&#x3D;sunny</span><br><span class="line">DAEMON&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;$NAME</span><br><span class="line">PIDFILE&#x3D;&#x2F;var&#x2F;run&#x2F;$NAME.pid</span><br><span class="line"></span><br><span class="line">[ -x &quot;$DAEMON&quot; ] || exit 0</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">  start)</span><br><span class="line">      if [ -f $PIDFILE ]; then</span><br><span class="line">        echo &quot;$NAME already running...&quot;</span><br><span class="line">        echo -e &quot;\033[1;35mStart Fail\033[0m&quot;</span><br><span class="line">      else</span><br><span class="line">        echo &quot;Starting $NAME...&quot;</span><br><span class="line">        start-stop-daemon -S -p $PIDFILE -m -b -o -q -x $DAEMON -- clientid 隧道id || return 2</span><br><span class="line">        echo -e &quot;\033[1;32mStart Success\033[0m&quot;</span><br><span class="line">    fi</span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">        echo &quot;Stoping $NAME...&quot;</span><br><span class="line">        start-stop-daemon -K -p $PIDFILE -s TERM -o -q || return 2</span><br><span class="line">        rm -rf $PIDFILE</span><br><span class="line">        echo -e &quot;\033[1;32mStop Success\033[0m&quot;</span><br><span class="line">    ;;</span><br><span class="line">  restart)</span><br><span class="line">    $0 stop &amp;&amp; sleep 2 &amp;&amp; $0 start</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br><span class="line">exit 0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="3、测试可执行代码"><a href="#3、测试可执行代码" class="headerlink" title="3、测试可执行代码"></a>3、测试可执行代码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod 755 &#x2F;etc&#x2F;init.d&#x2F;sunny</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start    #启动</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny stop     #停止</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny restart  #重启</span><br></pre></td></tr></table></figure>
+<h2 id="4、设置开机启动"><a href="#4、设置开机启动" class="headerlink" title="4、设置开机启动"></a>4、设置开机启动</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">cd /etc/init.d</span><br><span class="line">sudo update-rc.d sunny defaults <span class="number">90</span>    <span class="comment">#加入开机启动</span></span><br><span class="line">sudo update-rc.d -f sunny remove  <span class="comment">#取消开机启动</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020060422195522.png" alt="在这里插入图片描述"></p>
+<h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
+      <categories>
+        <category>隧道</category>
+      </categories>
+      <tags>
+        <tag>访问内网</tag>
+        <tag>内网穿透</tag>
+      </tags>
+  </entry>
+</search>
