@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="zh-CH" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>树莓派，反向ssh，内网通过公网访问到其他内网 - w啥都学</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="笔记简单说a内网，b公网，c内网在c内网怎么访问到a的内网里面，就和访问c内网其他主机一样？
+我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="w啥都学" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">w啥都学</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://Zaho-Sai-Sai.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">树莓派，反向ssh，内网通过公网访问到其他内网</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">树莓派，反向ssh，内网通过公网访问到其他内网</h1>
+        <div class="stuff">
+            <span>八月 27, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h2 id="简单说"><a href="#简单说" class="headerlink" title="简单说"></a>简单说</h2><p>a内网，b公网，c内网<br>在c内网怎么访问到a的内网里面，就和访问c内网其他主机一样？</p>
+<h2 id="我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，"><a href="#我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，" class="headerlink" title="我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，"></a>我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，</h2><h2 id="应为我的笔记本内网穿透没有什么太大的用处-，可以用花生壳内网穿透很简单。就不多说了"><a href="#应为我的笔记本内网穿透没有什么太大的用处-，可以用花生壳内网穿透很简单。就不多说了" class="headerlink" title="应为我的笔记本内网穿透没有什么太大的用处 ，可以用花生壳内网穿透很简单。就不多说了"></a>应为我的笔记本内网穿透没有什么太大的用处 ，可以用花生壳内网穿透很简单。就不多说了</h2><h2 id="都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，"><a href="#都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，" class="headerlink" title="都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，"></a>都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，</h2><h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><p>在《树莓派渗透实战》书说的如果从外网访问内网，是访问不了的，反向ssh隧道从内网就可以做到<br>内网执行的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -fN -R 5555:localhost:22  root@公网ip</span><br></pre></td></tr></table></figure>
+
+<p>服务器执行的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@localhost -p5555</span><br></pre></td></tr></table></figure>
+
+<h2 id="树莓派安装的是kali-linux系统-安装花生壳树莓派，"><a href="#树莓派安装的是kali-linux系统-安装花生壳树莓派，" class="headerlink" title="树莓派安装的是kali linux系统 安装花生壳树莓派，"></a>树莓派安装的是kali linux系统 安装花生壳树莓派，</h2><p>花生壳地址<a target="_blank" rel="noopener" href="https://hsk.oray.com/download/">https://hsk.oray.com/download/</a><br>应为树莓派我安装的arm64位的，他只有32位的，安装不上<br>下面命令对32位的支持</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --add-architecture armhf</span><br></pre></td></tr></table></figure>
+<p>反正还是安装不是，不知道怎么回事<br><img src="https://img-blog.csdnimg.cn/20200604210928493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="树莓派用Sunny-Ngrok内网穿透"><a href="#树莓派用Sunny-Ngrok内网穿透" class="headerlink" title="树莓派用Sunny-Ngrok内网穿透"></a>树莓派用Sunny-Ngrok内网穿透</h2><p>官方<a target="_blank" rel="noopener" href="http://www.ngrok.cc/">http://www.ngrok.cc/</a><br><img src="https://img-blog.csdnimg.cn/2020060421113237.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;sunny clientid  隧道id</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200604211248679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自启动<a target="_blank" rel="noopener" href="http://www.ngrok.cc/">http://www.ngrok.cc/</a>官方说明</p>
+<h2 id="1、下载客户端"><a href="#1、下载客户端" class="headerlink" title="1、下载客户端"></a>1、下载客户端</h2><p>这一步就都不用说了大家都知道怎么操作。下载完成之后将客户端执行文件移动到 /use/local/bin 目录下并给予可执行权限。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv sunny &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br><span class="line">sudo chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br></pre></td></tr></table></figure>
+<h2 id="2、编写启动脚本"><a href="#2、编写启动脚本" class="headerlink" title="2、编写启动脚本"></a>2、编写启动脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;init.d&#x2F;sunny 启动脚本代码</span><br></pre></td></tr></table></figure>
+<p>把代码里面的【隧道id】替换成自己的隧道id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh -e</span><br><span class="line">### BEGIN INIT INFO</span><br><span class="line"># Provides:          ngrok.cc</span><br><span class="line"># Required-Start:    $network $remote_fs $local_fs</span><br><span class="line"># Required-Stop:     $network $remote_fs $local_fs</span><br><span class="line"># Default-Start:     2 3 4 5</span><br><span class="line"># Default-Stop:      0 1 6</span><br><span class="line"># Short-Description: autostartup of frp for Linux</span><br><span class="line">### END INIT INFO</span><br><span class="line"></span><br><span class="line">NAME&#x3D;sunny</span><br><span class="line">DAEMON&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;$NAME</span><br><span class="line">PIDFILE&#x3D;&#x2F;var&#x2F;run&#x2F;$NAME.pid</span><br><span class="line"></span><br><span class="line">[ -x &quot;$DAEMON&quot; ] || exit 0</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">  start)</span><br><span class="line">      if [ -f $PIDFILE ]; then</span><br><span class="line">        echo &quot;$NAME already running...&quot;</span><br><span class="line">        echo -e &quot;\033[1;35mStart Fail\033[0m&quot;</span><br><span class="line">      else</span><br><span class="line">        echo &quot;Starting $NAME...&quot;</span><br><span class="line">        start-stop-daemon -S -p $PIDFILE -m -b -o -q -x $DAEMON -- clientid 隧道id || return 2</span><br><span class="line">        echo -e &quot;\033[1;32mStart Success\033[0m&quot;</span><br><span class="line">    fi</span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">        echo &quot;Stoping $NAME...&quot;</span><br><span class="line">        start-stop-daemon -K -p $PIDFILE -s TERM -o -q || return 2</span><br><span class="line">        rm -rf $PIDFILE</span><br><span class="line">        echo -e &quot;\033[1;32mStop Success\033[0m&quot;</span><br><span class="line">    ;;</span><br><span class="line">  restart)</span><br><span class="line">    $0 stop &amp;&amp; sleep 2 &amp;&amp; $0 start</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br><span class="line">exit 0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="3、测试可执行代码"><a href="#3、测试可执行代码" class="headerlink" title="3、测试可执行代码"></a>3、测试可执行代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 &#x2F;etc&#x2F;init.d&#x2F;sunny</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start    #启动</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny stop     #停止</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny restart  #重启</span><br></pre></td></tr></table></figure>
+<h2 id="4、设置开机启动"><a href="#4、设置开机启动" class="headerlink" title="4、设置开机启动"></a>4、设置开机启动</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/init.d</span><br><span class="line">sudo update-rc.d sunny defaults <span class="number">90</span>    <span class="comment">#加入开机启动</span></span><br><span class="line">sudo update-rc.d -f sunny remove  <span class="comment">#取消开机启动</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020060422195522.png" alt="在这里插入图片描述"></p>
+<h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
