@@ -22,10 +22,10 @@
 <p><strong>添加核心</strong><br>上面下载的核心文件里面的执行文件<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726194038573.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>添加上面解压出来了的核心文件的根目录<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020072619422713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>客户端代理</category>
+        <category>代理</category>
       </categories>
       <tags>
-        <tag>代理</tag>
+        <tag>客户端代理</tag>
       </tags>
   </entry>
   <entry>
@@ -54,11 +54,10 @@
 <p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020060422195522.png" alt="在这里插入图片描述"></p>
 <h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
       <categories>
-        <category>隧道</category>
+        <category>内网穿透</category>
       </categories>
       <tags>
-        <tag>访问内网</tag>
-        <tag>内网穿透</tag>
+        <tag>隧道</tag>
       </tags>
   </entry>
   <entry>
@@ -153,10 +152,10 @@ sql注入，都是基于査库、表、列语句
 在一些场景，想要快速获取数据，需要接住工具，如：burp</code></pre>
 <h2 id="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡"><a href="#靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡" class="headerlink" title="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs Less1-4关卡"></a>靶场是sqli-labs进行手动sql注入1-4到这个地方：<a href="https://blog.csdn.net/qq_41860876/article/details/107405426">Sqli-labs Less1-4关卡</a></h2>]]></content>
       <categories>
-        <category>网易web安全渗透  手动sql注入</category>
+        <category>sql注入</category>
       </categories>
       <tags>
-        <tag>sql注入</tag>
+        <tag>网易web安全渗透  手动sql注入</tag>
       </tags>
   </entry>
   <entry>
@@ -198,7 +197,7 @@ sql注入，都是基于査库、表、列语句
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140551606.png)
 然后运行
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">./a,sh</span><br></pre></td></tr></table></figure>
-运行后会出现![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140607834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)</code></pre>
+运行后会出现![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140607834.png)</code></pre>
 <p>2.创建一个burp.sh文件<br>文件里面a.sh内容</p>
 <pre><code><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">java -Dfile.encoding=utf<span class="number">-8</span> -javaagent:BurpSuiteCn.jar -Xbootclasspath/p:burp-loader-keygen.jar  -Xmx1024m -jar  burpsuite_pro_v2<span class="number">.0</span><span class="number">.11b</span>eta.jar</span><br></pre></td></tr></table></figure>
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140820842.png)</code></pre>
@@ -209,10 +208,10 @@ sql注入，都是基于査库、表、列语句
 
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">./burp.sh</span><br></pre></td></tr></table></figure>
 可以看到是中文的了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141137443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)</code></pre>
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141137443.png)</code></pre>
 <ol start="3">
-<li>安装<br> 下面叫内容复制到里面<pre><code>                 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141229717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)</code></pre>
-<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141306592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2019110414131589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>成功<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141336122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141342661.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>安装<br> 下面叫内容复制到里面<pre><code>                 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141229717.png)</code></pre>
+<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141306592.png" alt="在这里插入图片描述"><br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2019110414131589.png" alt="在这里插入图片描述"><br>成功<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141336122.png" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141342661.png" alt="在这里插入图片描述"></li>
 </ol>
 <h1 id="作者QQ2737977997"><a href="#作者QQ2737977997" class="headerlink" title="作者QQ2737977997"></a>作者QQ2737977997</h1>]]></content>
       <categories>
@@ -297,10 +296,10 @@ sql注入，都是基于査库、表、列语句
 <p>进行arp欺骗<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416174659711.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>urlsnarf -i wlan0抓取目标访问的网站<br>还有很多<br>成功获取到密码<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416182046801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
       <categories>
-        <category>用树莓派做移动黑客</category>
+        <category>树莓派kali linux</category>
       </categories>
       <tags>
-        <tag>树莓派kali linux</tag>
+        <tag>用树莓派做移动黑客</tag>
       </tags>
   </entry>
   <entry>
@@ -337,10 +336,10 @@ sql注入，都是基于査库、表、列语句
 <h4 id="4-读取数据-1"><a href="#4-读取数据-1" class="headerlink" title="4.读取数据"></a>4.读取数据</h4><p>通过上面的注入，知道了库，表，列<br>知道了全部就可以查询数据了<br>用这个<code>select 列名 from 库名.表名</code><br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(password) from security.users),3 --+</code><br>结果<br>通过注入叫数据给输出出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730191432156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>union联合查询注入</category>
+        <category>sql注入</category>
       </categories>
       <tags>
-        <tag>sql注入</tag>
+        <tag>union联合查询注入</tag>
       </tags>
   </entry>
   <entry>
